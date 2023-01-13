@@ -5,14 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Pattern_calc"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="250" Width="400">
     <Grid>
-        <StackPanel>
+        <StackPanel Margin="10">
             <TextBlock Text="Выберите арифметическую операцию"></TextBlock>
             <ComboBox Name="CBAr" SelectionChanged="CBAr_SelectionChanged"></ComboBox>
-            <TextBox Name="TBOne"></TextBox>
-            <TextBlock x:Name="TBsim" Text=" "></TextBlock>
-            <TextBox Name="TBTwo"></TextBox>
+            <TextBox x:Name="TBOne" Width="50" Height="50" Margin="0,10,180,0"/>
+            <TextBlock x:Name="TBsim" Width="50" Height="50" Margin="180,-48,10,0" Text=""></TextBlock>
+            <TextBox Name="TBTwo" Width="50" Height="50" Margin="0,0,0,0"></TextBox>
             <Button Name="BTRes" Content="Вычислить" Click="BTRes_Click"></Button>
             <TextBlock Text="Результат:"></TextBlock>
             <TextBlock Name="TBRes"></TextBlock>
