@@ -37,7 +37,7 @@ namespace Pattern_calc
                 TBRes.Text = "";
                 MessageBox.Show("Вы не выбрали арифметическую функцию!");
             }
-            else if (Model.Res++ == 2) 
+            else if (Model.Res++ == 2)
             {
                 TBRes.Text = "";
                 MessageBox.Show("Вы не указали второе число!");
@@ -52,6 +52,7 @@ namespace Pattern_calc
                 TBRes.Text = "";
                 MessageBox.Show("Ошибка!");
             }
+           
         }
 
         private void CBAr_SelectionChanged(object sender, SelectionChangedEventArgs e)
