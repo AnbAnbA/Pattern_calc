@@ -15,9 +15,9 @@ namespace Pattern_calc
         /// data
         /// </summary>
         public static List<string> dataList = new List<string> {"Сложение", "Вычитание", "Умножение", "Деление" };
-        static int a;
-        static int b;
-        static int res;
+        static double a;
+        static double b;
+        static double res;
 
         public static TextBox TBone;
         public static TextBox TBtwo;
@@ -47,7 +47,7 @@ namespace Pattern_calc
             }
         }
 
-        public static int Res 
+        public static double Res 
         {
             get 
             {
@@ -60,30 +60,30 @@ namespace Pattern_calc
                             if (TBsim.Text == "+")
                             {
                                 TBsim.Text = "+";
-                                a = Convert.ToInt32(TBone.Text);
-                                b = Convert.ToInt32(TBtwo.Text);
+                                a = Convert.ToDouble(TBone.Text);
+                                b = Convert.ToDouble(TBtwo.Text);
                                 res = a + b - 1;
                                 return res;
                             }
                             else if (TBsim.Text == "-")
                             {
                                 TBsim.Text = "-";
-                                a = Convert.ToInt32(TBone.Text);
-                                b = Convert.ToInt32(TBtwo.Text);
+                                a = Convert.ToDouble(TBone.Text);
+                                b = Convert.ToDouble(TBtwo.Text);
                                 res = a - b - 1;
                                 return res;
                             }
                             else if (TBsim.Text == "*")
                             {
-                                a = Convert.ToInt32(TBone.Text);
-                                b = Convert.ToInt32(TBtwo.Text);
+                                a = Convert.ToDouble(TBone.Text);
+                                b = Convert.ToDouble(TBtwo.Text);
                                 res = a * b - 1;
                                 return res;
                             }
                             else if (TBsim.Text == "/")
                             {
-                                a = Convert.ToInt32(TBone.Text);
-                                b = Convert.ToInt32(TBtwo.Text);
+                                a = Convert.ToDouble(TBone.Text);
+                                b = Convert.ToDouble(TBtwo.Text);
                                 res = a / b - 1;
                                 return res;
                             }
