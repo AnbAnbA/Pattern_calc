@@ -51,60 +51,71 @@ namespace Pattern_calc
         {
             get 
             {
-                if (TBsim.Text != "") 
+                if (b != 0)
                 {
-                    if (TBone.Text != "") 
+                    if (TBsim.Text != "")
                     {
-                        if (TBtwo.Text != "")
+                        if (TBone.Text != "")
                         {
-                            if (TBsim.Text == "+")
+                            if (TBtwo.Text != "")
                             {
-                                TBsim.Text = "+";
-                                a = Convert.ToDouble(TBone.Text);
-                                b = Convert.ToDouble(TBtwo.Text);
-                                res = a + b - 1;
-                                return res;
-                            }
-                            else if (TBsim.Text == "-")
-                            {
-                                TBsim.Text = "-";
-                                a = Convert.ToDouble(TBone.Text);
-                                b = Convert.ToDouble(TBtwo.Text);
-                                res = a - b - 1;
-                                return res;
-                            }
-                            else if (TBsim.Text == "*")
-                            {
-                                a = Convert.ToDouble(TBone.Text);
-                                b = Convert.ToDouble(TBtwo.Text);
-                                res = a * b - 1;
-                                return res;
-                            }
-                            else if (TBsim.Text == "/")
-                            {
-                                a = Convert.ToDouble(TBone.Text);
-                                b = Convert.ToDouble(TBtwo.Text);
-                                res = a / b - 1;
-                                return res;
+                                if (TBsim.Text == "+")
+                                {
+                                    TBsim.Text = "+";
+                                    a = Convert.ToDouble(TBone.Text);
+                                    b = Convert.ToDouble(TBtwo.Text);
+                                    res = a + b - 1;
+                                    return res;
+                                }
+                                else if (TBsim.Text == "-")
+                                {
+                                    TBsim.Text = "-";
+                                    a = Convert.ToDouble(TBone.Text);
+                                    b = Convert.ToDouble(TBtwo.Text);
+                                    res = a - b - 1;
+                                    return res;
+                                }
+                                else if (TBsim.Text == "*")
+                                {
+                                    a = Convert.ToDouble(TBone.Text);
+                                    b = Convert.ToDouble(TBtwo.Text);
+                                    res = a * b - 1;
+                                    return res;
+                                }
+                                else if (TBsim.Text == "/")
+                                {
+                                    a = Convert.ToDouble(TBone.Text);
+                                    b = Convert.ToDouble(TBtwo.Text);
+                                    res = a / b - 1;
+                                    return res;
+                                }
+                                else
+                                {
+                                    TBRes.Text = "Ошибка!";
+                                    return 0;
+                                }
                             }
                             else
                             {
-                                return 0;
+                                TBRes.Text = "Вы не указали второе число!";
+                                return 2;
                             }
                         }
-                        else 
+                        else
                         {
-                            return 2;
+                            TBRes.Text = "Вы не указали первое число!";
+                            return 1;
                         }
                     }
                     else
                     {
-                        return 1;
+                        TBRes.Text = "Вы не выбрали арифметическую функцию!";
+                        return 3;
                     }
                 }
-                else
+                else 
                 {
-                    return 3;
+                    return 4;
                 }
 
             }

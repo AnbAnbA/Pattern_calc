@@ -52,7 +52,12 @@ namespace Pattern_calc
                 TBRes.Text = "";
                 MessageBox.Show("Ошибка!");
             }
-           
+            else if (Model.Res++ == 4)
+            {
+                TBRes.Text = "";
+                MessageBox.Show("На ноль делить нельзя!");
+            }
+
         }
 
         private void CBAr_SelectionChanged(object sender, SelectionChangedEventArgs e)
