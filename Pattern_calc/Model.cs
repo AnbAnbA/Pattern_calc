@@ -51,8 +51,7 @@ namespace Pattern_calc
         {
             get 
             {
-                if (b != 0)
-                {
+               
                     if (TBsim.Text != "")
                     {
                         if (TBone.Text != "")
@@ -112,11 +111,7 @@ namespace Pattern_calc
                         TBRes.Text = "Вы не выбрали арифметическую функцию!";
                         return 3;
                     }
-                }
-                else 
-                {
-                    return 4;
-                }
+                
 
             }
             set 
